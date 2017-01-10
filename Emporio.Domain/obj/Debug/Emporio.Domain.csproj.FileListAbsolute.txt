@@ -1,0 +1,5 @@
+C:\Users\Anthony\Desktop\C# Projects\Emporio\Emporio.Domain\bin\Debug\Emporio.Domain.dll
+C:\Users\Anthony\Desktop\C# Projects\Emporio\Emporio.Domain\bin\Debug\Emporio.Domain.pdb
+C:\Users\Anthony\Desktop\C# Projects\Emporio\Emporio.Domain\obj\Debug\Emporio.Domain.dll
+C:\Users\Anthony\Desktop\C# Projects\Emporio\Emporio.Domain\obj\Debug\Emporio.Domain.pdb
+C:\Users\Anthony\Desktop\C# Projects\Emporio\Emporio.Domain\obj\Debug\Emporio.Domain.csprojResolveAssemblyReference.cache

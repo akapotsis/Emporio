@@ -1,0 +1,7 @@
+C:\Users\Anthony\Desktop\C# Projects\Emporio\Emporio.Domain.UnitTests\bin\Debug\Emporio.Domain.UnitTests.dll
+C:\Users\Anthony\Desktop\C# Projects\Emporio\Emporio.Domain.UnitTests\bin\Debug\Emporio.Domain.UnitTests.pdb
+C:\Users\Anthony\Desktop\C# Projects\Emporio\Emporio.Domain.UnitTests\obj\Debug\Emporio.Domain.UnitTests.csprojResolveAssemblyReference.cache
+C:\Users\Anthony\Desktop\C# Projects\Emporio\Emporio.Domain.UnitTests\obj\Debug\Emporio.Domain.UnitTests.dll
+C:\Users\Anthony\Desktop\C# Projects\Emporio\Emporio.Domain.UnitTests\obj\Debug\Emporio.Domain.UnitTests.pdb
+C:\Users\Anthony\Desktop\C# Projects\Emporio\Emporio.Domain.UnitTests\bin\Debug\Emporio.Domain.dll
+C:\Users\Anthony\Desktop\C# Projects\Emporio\Emporio.Domain.UnitTests\bin\Debug\Emporio.Domain.pdb

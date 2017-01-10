@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emporio.Domain", "Emporio.Domain\Emporio.Domain.csproj", "{BE03623B-6279-4FF5-8361-D706BD5F8B9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emporio.Domain.UnitTests", "Emporio.Domain.UnitTests\Emporio.Domain.UnitTests.csproj", "{D7F4DFCD-CFE0-4CC1-A2C9-997EB4706A59}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE03623B-6279-4FF5-8361-D706BD5F8B9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE03623B-6279-4FF5-8361-D706BD5F8B9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE03623B-6279-4FF5-8361-D706BD5F8B9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE03623B-6279-4FF5-8361-D706BD5F8B9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7F4DFCD-CFE0-4CC1-A2C9-997EB4706A59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7F4DFCD-CFE0-4CC1-A2C9-997EB4706A59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7F4DFCD-CFE0-4CC1-A2C9-997EB4706A59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7F4DFCD-CFE0-4CC1-A2C9-997EB4706A59}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
