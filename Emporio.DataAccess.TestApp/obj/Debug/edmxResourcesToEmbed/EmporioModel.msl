@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EmporioDemoModelStoreContainer" CdmEntityContainer="EmporioDemoEntities">
+    <EntitySetMapping Name="CatalogItems">
+      <EntityTypeMapping TypeName="EmporioDemoModel.CatalogItem">
+        <MappingFragment StoreEntitySet="CatalogItem">
+          <ScalarProperty Name="CatalogItemId" ColumnName="CatalogItemId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShoppingLists">
+      <EntityTypeMapping TypeName="EmporioDemoModel.ShoppingList">
+        <MappingFragment StoreEntitySet="ShoppingList">
+          <ScalarProperty Name="ShoppingListId" ColumnName="ShoppingListId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShoppingListItems">
+      <EntityTypeMapping TypeName="EmporioDemoModel.ShoppingListItem">
+        <MappingFragment StoreEntitySet="ShoppingListItem">
+          <ScalarProperty Name="ShoppingListItemId" ColumnName="ShoppingListItemId" />
+          <ScalarProperty Name="ShoppingListId" ColumnName="ShoppingListId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="IsFavorite" ColumnName="IsFavorite" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -19,6 +19,7 @@ namespace Emporio.Domain.Entities
         public void Add(ShoppingItem item)
         {
             bool exists = false;
+
             foreach (ShoppingItem s in _items)
             {
                 if (s.Name.Equals(item.Name))
@@ -27,6 +28,7 @@ namespace Emporio.Domain.Entities
                     exists = true;
                 }
             }
+
             if (exists == false)
             {
                 _items.Add(item);
@@ -59,12 +61,9 @@ namespace Emporio.Domain.Entities
             }
         }
 
-        // ToDo: Add entire Recipe or a RecipeItem to ShoppingList
-
         public ShoppingItem[] Items 
         {
             get { return _items.ToArray(); }
         }
-
     }
 }

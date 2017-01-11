@@ -1,0 +1,10 @@
+C:\Users\Anthony\Desktop\C# Projects\Emporio\Emporio.DataAccess.TestApp\bin\Debug\Emporio.DataAccess.TestApp.exe.config
+C:\Users\Anthony\Desktop\C# Projects\Emporio\Emporio.DataAccess.TestApp\bin\Debug\Emporio.DataAccess.TestApp.exe
+C:\Users\Anthony\Desktop\C# Projects\Emporio\Emporio.DataAccess.TestApp\bin\Debug\Emporio.DataAccess.TestApp.pdb
+C:\Users\Anthony\Desktop\C# Projects\Emporio\Emporio.DataAccess.TestApp\bin\Debug\EntityFramework.dll
+C:\Users\Anthony\Desktop\C# Projects\Emporio\Emporio.DataAccess.TestApp\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Anthony\Desktop\C# Projects\Emporio\Emporio.DataAccess.TestApp\bin\Debug\EntityFramework.xml
+C:\Users\Anthony\Desktop\C# Projects\Emporio\Emporio.DataAccess.TestApp\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Anthony\Desktop\C# Projects\Emporio\Emporio.DataAccess.TestApp\obj\Debug\Emporio.DataAccess.TestApp.csprojResolveAssemblyReference.cache
+C:\Users\Anthony\Desktop\C# Projects\Emporio\Emporio.DataAccess.TestApp\obj\Debug\Emporio.DataAccess.TestApp.exe
+C:\Users\Anthony\Desktop\C# Projects\Emporio\Emporio.DataAccess.TestApp\obj\Debug\Emporio.DataAccess.TestApp.pdb

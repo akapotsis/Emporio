@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EmporioDemoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CatalogItem">
+    <Key>
+      <PropertyRef Name="CatalogItemId" />
+    </Key>
+    <Property Name="CatalogItemId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Category" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Photo" Type="binary" MaxLength="7000" />
+  </EntityType>
+  <EntityType Name="ShoppingList">
+    <Key>
+      <PropertyRef Name="ShoppingListId" />
+    </Key>
+    <Property Name="ShoppingListId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ShoppingListItem">
+    <Key>
+      <PropertyRef Name="ShoppingListItemId" />
+    </Key>
+    <Property Name="ShoppingListItemId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ShoppingListId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Count" Type="int" Nullable="false" />
+    <Property Name="IsFavorite" Type="bit" />
+  </EntityType>
+  <Association Name="FK_ShoppingList">
+    <End Role="ShoppingList" Type="Self.ShoppingList" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ShoppingListItem" Type="Self.ShoppingListItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ShoppingList">
+        <PropertyRef Name="ShoppingListId" />
+      </Principal>
+      <Dependent Role="ShoppingListItem">
+        <PropertyRef Name="ShoppingListId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EmporioDemoModelStoreContainer">
+    <EntitySet Name="CatalogItem" EntityType="Self.CatalogItem" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ShoppingList" EntityType="Self.ShoppingList" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ShoppingListItem" EntityType="Self.ShoppingListItem" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_ShoppingList" Association="Self.FK_ShoppingList">
+      <End Role="ShoppingList" EntitySet="ShoppingList" />
+      <End Role="ShoppingListItem" EntitySet="ShoppingListItem" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

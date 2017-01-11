@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EmporioDemoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CatalogItem">
+    <Key>
+      <PropertyRef Name="CatalogItemId" />
+    </Key>
+    <Property Name="CatalogItemId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Photo" Type="Binary" MaxLength="7000" FixedLength="true" />
+  </EntityType>
+  <EntityType Name="ShoppingList">
+    <Key>
+      <PropertyRef Name="ShoppingListId" />
+    </Key>
+    <Property Name="ShoppingListId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="ShoppingListItems" Relationship="Self.FK_ShoppingList" FromRole="ShoppingList" ToRole="ShoppingListItem" />
+  </EntityType>
+  <EntityType Name="ShoppingListItem">
+    <Key>
+      <PropertyRef Name="ShoppingListItemId" />
+    </Key>
+    <Property Name="ShoppingListItemId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ShoppingListId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Count" Type="Int32" Nullable="false" />
+    <Property Name="IsFavorite" Type="Boolean" />
+    <NavigationProperty Name="ShoppingList" Relationship="Self.FK_ShoppingList" FromRole="ShoppingListItem" ToRole="ShoppingList" />
+  </EntityType>
+  <Association Name="FK_ShoppingList">
+    <End Role="ShoppingList" Type="Self.ShoppingList" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ShoppingListItem" Type="Self.ShoppingListItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ShoppingList">
+        <PropertyRef Name="ShoppingListId" />
+      </Principal>
+      <Dependent Role="ShoppingListItem">
+        <PropertyRef Name="ShoppingListId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EmporioDemoEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CatalogItems" EntityType="Self.CatalogItem" />
+    <EntitySet Name="ShoppingLists" EntityType="Self.ShoppingList" />
+    <EntitySet Name="ShoppingListItems" EntityType="Self.ShoppingListItem" />
+    <AssociationSet Name="FK_ShoppingList" Association="Self.FK_ShoppingList">
+      <End Role="ShoppingList" EntitySet="ShoppingLists" />
+      <End Role="ShoppingListItem" EntitySet="ShoppingListItems" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
